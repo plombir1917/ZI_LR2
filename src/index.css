@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 * {
-    font-family: "Bahnschrift", serif !important;
+  font-family: 'Bahnschrift', serif !important;
 }
