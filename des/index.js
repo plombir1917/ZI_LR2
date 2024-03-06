@@ -1,8 +1,8 @@
-const DES = require("./des/des");
+const DES = require('./des/des');
 
-const fastify = require("fastify")({ logger: true });
-
-fastify.get("/encrypt", function handler(request, reply) {
+const fastify = require('fastify')({ logger: true });
+('');
+fastify.get('/encrypt', function handler(request, reply) {
   console.log(request.query);
 
   const key = request.query?.key;
@@ -16,10 +16,10 @@ fastify.get("/encrypt", function handler(request, reply) {
   const cipher = des.data;
   des.decrypt(cipher);
   console.info(des.data, des.dataAsString);
-  const _decrypt = des.dataAsString.split("\u0000").join("");
+  const _decrypt = des.dataAsString.split('\u0000').join('');
 
-  reply.header("Access-Control-Allow-Origin", "*");
-  reply.header("Access-Control-Allow-Methods", "POST");
+  reply.header('Access-Control-Allow-Origin', '*');
+  reply.header('Access-Control-Allow-Methods', 'POST');
 
   reply.send({ encrypt: _encrypt, decrypt: _decrypt });
 });
