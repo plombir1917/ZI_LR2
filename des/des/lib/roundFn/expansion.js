@@ -1,5 +1,4 @@
-const _E = require('../../tables/E')
-const expand = require('../../utils/permutate')
+const _E = require('../../tables/E');
+const expand = require('../../utils/permutate');
 
-module.exports = blockR => expand(blockR, _E)
-    
+module.exports = (blockR) => expand(blockR, _E);

@@ -1,6 +1,6 @@
 const joinBlocks = function () {
-    this.data = Buffer.concat([...this.blocks])
-    return this
-}
+  this.data = Buffer.concat([...this.blocks]);
+  return this;
+};
 
-module.exports = joinBlocks
+module.exports = joinBlocks;
